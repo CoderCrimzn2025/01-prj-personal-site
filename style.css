@@ -1,1 +1,135 @@
-/* Add you CSS here */
+/* Simple, beginner-friendly CSS for Carrington's Portfolio Page */
+
+/* Page layout basics */
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #330000; /* dark red page background */
+	color: #f5e6c8; /* light cream text for contrast */
+}
+
+.site-header {
+	text-align: center;
+	padding: 24px 12px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(212,175,55,0.18); /* subtle gold accent */
+}
+
+.site-header h1 {
+	margin: 0 0 12px 0;
+	font-size: 26px;
+	color: #f5e6c8;
+}
+
+.profile {
+	display: inline-block;
+	text-align: center;
+}
+
+.profile-pic {
+	/* Replace the image in img/profile.jpg with your own photo */
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 60px; /* makes the image round */
+	border: 2px solid #ffb300; /* gold-ish border around photo */
+	display: block;
+	margin: 0 auto 8px auto;
+}
+
+.profile-name {
+	font-weight: bold;
+}
+
+/* Main content area */
+.content {
+	max-width: 900px;
+	margin: 24px auto;
+	padding: 0 12px;
+}
+
+.card {
+	background: #670000;
+	padding: 16px;
+	margin-bottom: 16px;
+	border-radius: 6px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+	border: 3px solid #D4AF37; /* golden accent border */
+	color: #ffffff; /* light text on dark card */
+}
+
+.card h2 {
+	margin-top: 0;
+}
+
+.skills-list {
+	list-style-type: disc;
+	padding-left: 20px;
+}
+
+/* Gallery for graphics thumbnails */
+.gallery {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.graphic-thumb {
+	width: 240px;
+	height: 160px;
+	object-fit: cover;
+	/* Shift the cropped area so faces appear centered in the thumbnail. */
+	object-position: center 30%;
+	border: 2px solid #D4AF37; /* gold border to match cards */
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 540px) {
+    .graphic-thumb {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.site-footer {
+	text-align: center;
+	padding: 16px 8px;
+	color: #f5e6c8;
+	font-size: 14px;
+}
+
+/* Social links styling */
+.social-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.social-link {
+	display: inline-block;
+	padding: 8px 12px;
+	background: rgba(212,175,55,0.06);
+	color: #f5e6c8;
+	text-decoration: none;
+	border: 1px solid rgba(212,175,55,0.28);
+	border-radius: 4px;
+}
+
+.social-link:hover {
+	background: rgba(212,175,55,0.12);
+}
+
+/* Small responsive tweak: make profile picture a bit smaller on narrow screens */
+@media (max-width: 420px) {
+	.profile-pic {
+		width: 88px;
+		height: 88px;
+		border-radius: 44px;
+	}
+}

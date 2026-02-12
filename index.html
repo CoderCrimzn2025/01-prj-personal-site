@@ -2,10 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrington's Portfolio Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Simple header with profile picture and title -->
+  <header class="site-header">
+    <h1>Carrington's Portfolio Page</h1>
+    <!-- Profile block: uses the attached image at img/me.png -->
+    <div class="profile">
+      <img src="img/profile.jpg" alt="Carrington" class="profile-pic">
+      <div class="profile-name"></div>
+    </div>
+  </header>
+
+  <main class="content">
+    <!-- About / Bio section -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        Hello — I'm Carrington. I'm learning web development in a college course.
+        I enjoy building simple websites, experimenting with HTML and CSS, and
+        improving my programming skills one project at a time.
+      </p>
+    </section>
+    
+    <!-- Graphics gallery section: replace the image filenames with your own files in the img/ folder -->
+    <section id="graphics" class="card">
+      <h2>Graphics</h2>
+      <p>Add images of your designs below. Replace the `src` values with your files inside the <code>img/</code> folder.</p>
+      <div class="gallery">
+        <img src="img/graphic1.jpg" alt="Graphic 1" class="graphic-thumb">
+        <img src="img/graphic2.jpg" alt="Graphic 2" class="graphic-thumb">
+        <img src="img/graphic3.jpg" alt="Graphic 3" class="graphic-thumb">
+      </div>
+    </section>
+
+    <!-- Skills section: edit the list as you learn new technologies -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Graphic Design, VFX, Logo Design</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Basic JavaScript</li>
+        <li>Version control (Git)</li>
+      </ul>
+    </section>
+
+    <!-- Future projects section (placeholder) -->
+    <section id="projects" class="card">
+      <h2>Projects (coming soon)</h2>
+      <p>Under Development Check Back Soon !</p>
+    </section>
+      <!-- Social links section: replace the href values with your real profiles -->
+      <section id="socials" class="card">
+        <h2>Socials</h2>
+        <p>Connect with me:</p>
+        <ul class="social-list">
+          <li><a href="#" class="social-link">Youtube</a></li>
+          <li><a href="#" class="social-link">GitHub</a></li>
+          <li><a href="#" class="social-link">LinkedIn</a></li>
+          <li><a href="#" class="social-link">Instagram</a></li>
+        </ul>
+      </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Carrington — Built with simple HTML &amp; CSS</p>
+  </footer>
+
+  <script>
+    // Small script to set the copyright year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
